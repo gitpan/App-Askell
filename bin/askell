@@ -1,0 +1,59 @@
+#!/usr/bin/env perl
+#
+# This file is part of App-Askell
+#
+# This software is copyright (c) 2013 by Loïc TROCHET.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
+# ABSTRACT: Execute commands defined by the user when files are created, modified or deleted
+# PODNAME: askell
+
+use strict;
+use warnings;
+use App::Askell;
+
+our $VERSION = '0.132850'; # VERSION
+
+App::Askell->new_with_options->run;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+askell - Execute commands defined by the user when files are created, modified or deleted
+
+=head1 VERSION
+
+version 0.132850
+
+=head1 SYNOPSIS
+
+    askell --help (-h -? --usage)                   # display help message
+    askell --version (-v)                           # display version
+    askell --file foo.yml (-f foo.yml)              # use foo.yml as configuration file
+    askell --file foo.yml --silent (-f foo.yml -s)  # like above but runs silently
+
+=head1 DESCRIPTION
+
+This application allows you to execute commands when some files are created, modified or deleted in directories.
+
+See L<App::Askell>
+
+=encoding utf8
+
+=head1 AUTHOR
+
+Loïc TROCHET <losyme@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Loïc TROCHET.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
